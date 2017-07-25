@@ -101,4 +101,65 @@ for x in range(i,i+1):
 pi = 4* sumSeries#finally the series states that all terms should be multiplid by 4
 print("The approximation of pi is ", pi)
 
+#some basic functions__________________________________________________________________________________________________________________
+def get_sales(employee_number,total_number_of_employees):       
+    if employee_number==1:
+        sales = float(input("Enter the monthly sales for the first employee:"))
+        main(sales)         
+    elif employee_number==total_number_of_employees:
+        sales = float(input("Enter the monthly sales for the Last employee:"))
+        main(sales)
+    else:
+        sales = float(input("Enter the monthly sales for the NEXT employee OR enter 0 to exit:"))
+        if sales ==0:
+            print("Goodbye")
+        else:
+            main(sales)
+    return sales
+
+def get_advanced_pay():
+    advancedPay = float(input("Enter the amount of advancedpay, or enter 0 if no advanced was given "))
+    return advancedPay
+
+def determine_comm_rate(sales):
+    if sales <10000:
+        commissionRate = 10/100
+    elif sales >= 10000 and sales < 15000:
+        commissionRate = 12/100
+    elif sales >= 15000 and sales < 18000:
+        commissionRate = 14/100
+    elif sales >= 18000 and sales <22000:
+        commissionRate = 16/100
+    else:
+        commissionRate = 18/100
+    return commissionRate
+
+def calculate_pay(sales, comm_rate , advance_pay):
+    pay = sales*comm_rate - advance_pay
+    return pay
+
+def willReimburseCompany(pay):
+    if pay<0:
+        return True
+    else:
+        return False
+   
+def main(sales):  
+   
+    advance = get_advanced_pay()
+    commission = determine_comm_rate(sales)
+    print("Advanced pay:", advance)
+    pay =  calculate_pay(sales, commission, advance)
+    print("The pay is: R", pay)
+    if willReimburseCompany(pay):
+        print("The salesperson must reimburse the company")
+    print("")
+totalNumberOfEmployees = int(input("Enter the number of employees you want to run their pay:"))
+for x in range(1,totalNumberOfEmployees+1):
+    employeeNumber=  x
+    sales=  get_sales(employeeNumber,totalNumberOfEmployees)
+    if sales ==0:
+        break
+        
+#____________________________________________________________________________________________________________________________
 
