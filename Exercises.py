@@ -163,3 +163,8 @@ for x in range(1,totalNumberOfEmployees+1):
         
 #____________________________________________________________________________________________________________________________
 
+#Prac5Q1-Patterns
+rows = (int)(input("Please enter the amount of rows "))
+for x in range(rows):
+    stars = x+1    
+    print("*"*stars)
