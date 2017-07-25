@@ -100,3 +100,229 @@ for x in range(i,i+1):
     sumSeries += term
 pi = 4* sumSeries#finally the series states that all terms should be multiplid by 4
 print("The approximation of pi is ", pi)
+
+#Prac6Q1 not working the while statements
+
+num = int(input("enter a number "))
+
+sumNums =num
+
+while sumNums>19:
+
+num =sumNums
+
+print(num)
+
+while num!=0:
+
+r = num%10#remainder
+
+sumNums = sumNums+r
+
+num = num//10#remove the last digit
+
+print(sumNums)
+
+
+#Prac6Q2
+
+oddAbundant= False
+
+number=12
+
+while oddAbundant == False:
+
+sumAbundant= 0
+
+for x in range(1,number):
+
+if number%x==0 :
+
+sumAbundant += x
+
+if(sumAbundant>number):
+
+print(number)
+
+if not(number%2==0):
+
+oddAbundant=True
+
+number+=1
+
+
+#Prac6Q3
+
+number = int(input("Enter a number"))
+
+countFactors =0
+
+for x in range(1,number+1):
+
+if number%x==0:
+
+countFactors+=1
+
+if countFactors ==2:
+
+print("The number is a prime number")
+
+#Prac6Q4
+
+A = int(input("enter positive integer 1 "))
+
+B = int(input("enter positive integer 2 "))
+
+sumPrime =0
+
+for x in range(A+1,B):
+
+factors = 0
+
+for i in range(1,x+1):
+
+if x%i==0:
+
+factors+=1
+
+if factors==2:
+
+sumPrime = x+sumPrime
+
+print("The sum of all the primes between " ,A, " and " , B ," is ", sumPrime)
+
+
+
+#Prac5Q1
+
+rows = (int)(input("Please enter the amount of rows "))
+
+for x in range(rows):
+
+stars = x+1
+
+print("*"*stars)
+
+
+#Prac5Q2
+
+lines = int(input("The number of lines needed "))
+
+numOfSpaces = lines -1
+
+for x in range(1,lines+1):
+
+stars = (2*x)-1
+
+print( " "*numOfSpaces, end="")
+
+print("*"* stars, end="")
+
+numOfSpaces -=1
+
+print()
+
+
+#Prac5Q3
+
+num = int(input("PLease enter the number"))
+
+spaces = num-1
+
+for x in range(1,num+1):
+
+print(" "*spaces, end="")
+
+for i in range(x,0,-1):
+
+print(i, end="")
+
+spaces -=1
+
+print()
+
+
+#Prac5Q4
+
+rows = int(input("Please enter the number of rows"))
+
+for x in range(rows,0,-1):
+
+for i in range(1,x+1):
+
+print(i, end="")
+
+print()
+
+
+#Prac5Q5
+
+lines = int(input("The number of lines needed "))
+
+numOfSpaces = lines -1
+
+for x in range(1,lines+1):
+
+stars = (2*x)-1
+
+print( " "*numOfSpaces, end="")
+
+print("*"* stars, end="")
+
+numOfSpaces -=1
+
+print()
+
+
+
+
+
+
+
+
+#Prac5Q6
+
+lines = int(input("enter the number of lines"))
+
+spaces = (lines-1)*2
+
+num =1
+
+for x in range(1,lines+1):
+
+rangeLp = (2*x)-1
+
+print(" "*spaces,end="")
+
+for x in range(rangeLp):
+
+print(num,end=" ")
+
+num+=1
+
+spaces-=2
+
+print()
+
+
+#Prac5Q7
+
+n = int(input("enter the number of triangles"))
+
+s = int(input("enter the size"))
+
+spaces = s-1
+
+for x in range(1,s+1):
+
+for i in range(1,n+1):
+
+print(" "*spaces, end="")
+
+print("*"*x, end=" ")
+
+print(" ")
+
+spaces-=1
+
+print()
