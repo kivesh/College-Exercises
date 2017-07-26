@@ -177,3 +177,16 @@ for x in range(rows):
     print(" "*spaces, end="")
     print("*"*stars)
     spaces = spaces- 1
+    
+    #Prac5Q3
+num = int(input("PLease enter the number"))
+spaces = num-1
+for row in range(1,num+1):
+    #spaces from the heading is incorrect
+    print(" "*spaces*2, end="")
+    for LHS in range(row,0,-1):
+        print(LHS, end=" ")
+    for RHS in range(2,row+1):
+        print(RHS,end=" ")
+    spaces -=1 
+    print()
