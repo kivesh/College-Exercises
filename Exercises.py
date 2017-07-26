@@ -259,3 +259,15 @@ while oddAbundant == False:
         if not(number%2==0):
             oddAbundant=True
     number+=1    
+
+   
+#Prac6Q3
+number = int(input("Enter a number"))
+countFactors =0
+for x in range(1,number+1):
+    if number%x==0:
+        countFactors+=1
+if countFactors ==2:
+    print("The number is a prime number")
+   
+
