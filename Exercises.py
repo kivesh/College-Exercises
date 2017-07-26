@@ -168,3 +168,12 @@ rows = (int)(input("Please enter the amount of rows "))
 for x in range(rows):
     stars = x+1    
     print("*"*stars)
+    
+#Prac5Q2
+rows = int(input("Please enter the amount of rows"))
+spaces = rows-1
+for x in range(rows):
+    stars = x+1
+    print(" "*spaces, end="")
+    print("*"*stars)
+    spaces = spaces- 1
