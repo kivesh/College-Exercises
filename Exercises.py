@@ -208,3 +208,15 @@ for x in range(1,lines+1):
     numOfSpaces -=1    
     print()
 
+#Prac5Q6-Patterns
+lines = int(input("enter the number of lines"))
+spaces = (lines-1)*2
+num =1 
+for x in range(1,lines+1):
+    rangeLp = (2*x)-1
+    print(" "*spaces,end="")
+    for x in range(rangeLp):
+        print(num,end=" ")
+        num+=1
+    spaces-=2
+    print()
