@@ -270,4 +270,16 @@ for x in range(1,number+1):
 if countFactors ==2:
     print("The number is a prime number")
    
+#Prac6Q4
+A = int(input("enter positive integer 1 "))
+B = int(input("enter positive integer 2 "))
+sumPrime =0
+for x in range(A+1,B):
+    factors = 0
+    for i in range(1,x+1):
+        if x%i==0:
+            factors+=1
+    if factors==2:
+        sumPrime = x+sumPrime
+print("The sum of all the primes between " ,A, " and " , B ," is ", sumPrime)
 
