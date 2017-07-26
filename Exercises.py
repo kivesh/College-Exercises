@@ -220,3 +220,29 @@ for x in range(1,lines+1):
         num+=1
     spaces-=2
     print()
+
+#Prac6Q1 
+num=0
+num = int(input("Enter a number"))
+sumNum =0
+stillCalc = True
+def calcSumNum():
+    while num!=0:
+        digit = num %10
+        sumNum = digit+sumNum
+        num = num//10
+        
+    if sumNum>19:
+            num = sumNum
+            sumNum =0
+    else:
+            stillCalc = False
+calcSumNum()
+while stillCalc == True:
+    calcSumNum()
+if sumNum%3==0:
+    print("The number is divisible by three")
+else:
+    print("Not divisivble")
+    
+    
