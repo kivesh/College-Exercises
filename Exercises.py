@@ -169,7 +169,7 @@ for x in range(rows):
     stars = x+1    
     print("*"*stars)
     
-#Prac5Q2
+#Prac5Q2-Patterns
 rows = int(input("Please enter the amount of rows"))
 spaces = rows-1
 for x in range(rows):
@@ -178,7 +178,7 @@ for x in range(rows):
     print("*"*stars)
     spaces = spaces- 1
     
-    #Prac5Q3
+    #Prac5Q3-Patterns
 num = int(input("PLease enter the number"))
 spaces = num-1
 for row in range(1,num+1):
@@ -191,9 +191,20 @@ for row in range(1,num+1):
     spaces -=1 
     print()
 
-    #Prac5Q4
+    #Prac5Q4-Patterns
 rows = int(input("Please enter the number of rows"))
 for x in range(rows,0,-1):
     for i in range(1,x+1):
         print(i, end="")
     print()
+    
+ #Prac5Q5-Patterns
+lines = int(input("The number of lines needed "))
+numOfSpaces = lines -1 
+for x in range(1,lines+1):
+    stars = (2*x)-1
+    print( " "*numOfSpaces, end="")
+    print("*"* stars, end="")
+    numOfSpaces -=1    
+    print()
+
