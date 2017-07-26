@@ -283,3 +283,123 @@ for x in range(A+1,B):
         sumPrime = x+sumPrime
 print("The sum of all the primes between " ,A, " and " , B ," is ", sumPrime)
 
+#Prac7Q1
+def celsiusToFarenheit(tempInCelsius):
+    farenheit = (9.0/5)*tempInCelsius + 32#fahrenheit = (9.0 / 5) * celsius + 32
+    return farenheit
+def farenheitToCelsius(tempInFarenheit):
+    celsius = (tempInFarenheit-32)/(9.0/5)
+    return celsius
+
+print("Celsius\tFarenhiet")
+for x in range(40,30,-1):
+    x = x+0.00
+    print(x,"\t",celsiusToFarenheit(x))
+print("")    
+print("Farenheit\tCelsius")
+for x in range(120,20,-10):
+    x = x +0.00
+    print(x,"\t", farenheitToCelsius(x))
+    
+    
+#Prac7Q2
+num = int(input("enter a integer"))
+displayNum = num
+def reduceNum(numParam):
+    num = numParam    
+    sumNum =0
+    while sumNum>19 or sumNum ==0:
+        sumNum =0
+        while num!=0:
+            digit = num%10
+            sumNum = digit +sumNum
+            num = num//10
+        num = sumNum
+    return sumNum
+sumF = reduceNum(num)
+if sumF%3==0:
+    print(displayNum," is divisible by three ")
+    
+#Prac7Q3
+num = int(input("enter a number"))
+def sumOfFactors(numParam):
+    num = numParam
+    sumFactors =0
+    for x in range(1,num):
+        if num%x ==0:
+            sumFactors = num + sumFactors
+    return sumFactors
+sumFacs = sumOfFactors(num)
+if sumFacs>num:
+    print(num, "is abundant")
+elif sumFacs <num:
+    print(num, "is deficient")
+else:
+    print(num, "is proper")
+    
+    
+#Palindromes
+string = input("enter a string to check if it is a palindome: ")
+newString = string.replace(" ","")
+perfectString = ""
+for char in newString:
+    if char.isalpha() or char.isdigit():#remove punctuation
+        perfectString = perfectString+char
+perfectString = perfectString.lower()
+        
+reverseString = "" 
+for pos in range(1,len(perfectString)+1):
+    reverseString = reverseString+perfectString[pos*-1]
+
+if reverseString == perfectString:
+    print("It a palindrome!!!!!!!")
+    
+#count consonants
+string = input("Enter a string: ")
+consanant = input("Enter the consonant to be counted: ")
+def howmany(st,c):
+    count =0
+    for char in st:
+        if char ==c:
+            count+=1
+    return count
+print("The number of occurences of the consonant is ", howmany(string, consanant))   
+
+#remove spaces and punctuation
+string = input("enter a string")
+newString = ""
+for char in string:
+    if char.isdigit() or char.isalpha():
+        newString = newString + char
+print(newString)
+
+#Add strings in their unicode numbers.
+string = input("enter a string")
+sumChar =0
+for char in string:
+    num = ord(char)-68
+    sumChar= num +sumChar
+print("The converted string is: ", sumChar)
+
+import random
+string = input("enter a string")
+position = []
+positions = random.randint(0,len(string)-1)
+position.append(positions)
+print(position)
+newString = string(positions)
+
+def positionInList(rand):
+    for x in position:
+        if x == rand:
+            return false
+        else:
+            return true
+for x in range(len(string)-2):
+    positions = random.randint(0,len(string)-1)   
+    while positionsInList(positions):
+        positions = random.randint(0,len(string)-1)
+    position.apend(positions)    
+    newString = newString + string[positions]
+print(newString)
+
