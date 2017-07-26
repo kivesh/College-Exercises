@@ -246,3 +246,16 @@ else:
     print("Not divisivble")
     
     
+#Prac6Q2
+oddAbundant= False
+number=12
+while oddAbundant == False:
+    sumAbundant= 0
+    for x in range(1,number):
+        if number%x==0 :
+                    sumAbundant += x 
+    if(sumAbundant>number):
+        print(number)
+        if not(number%2==0):
+            oddAbundant=True
+    number+=1    
