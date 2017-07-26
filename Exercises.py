@@ -190,3 +190,10 @@ for row in range(1,num+1):
         print(RHS,end=" ")
     spaces -=1 
     print()
+
+    #Prac5Q4
+rows = int(input("Please enter the number of rows"))
+for x in range(rows,0,-1):
+    for i in range(1,x+1):
+        print(i, end="")
+    print()
